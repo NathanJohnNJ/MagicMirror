@@ -1,4 +1,10 @@
+serveronly/
+CHANGELOG.md
+LICENSE.md
+Collaboration.md
+translations/
 # Various Node ignoramuses.
+package-lock.json
 logs
 *.log
 npm-debug.log*

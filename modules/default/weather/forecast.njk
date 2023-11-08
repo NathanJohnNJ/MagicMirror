@@ -19,11 +19,12 @@
                 <td class="bright weather-icon">
                     <span class="wi weathericon wi-{{ f.weatherType }}"></span>
                 </td>
-                <td class="align-right bright max-temp">
-                    {{ f.maxTemperature | roundValue | unit("temperature") | decimalSymbol }}
-                </td>
-                <td class="align-right min-temp">
-                    {{ f.minTemperature | roundValue | unit("temperature") | decimalSymbol }}
+                <td class="align-right bright min-temp">
+                    {% set max = f.maxTemperature %}
+                    {% set min = f.minTemperature %}
+                    {% set totalTemp = max + min %}
+                    {% set avgTemp = totalTemp / 2 %}
+                    {{ avgTemp | roundValue | unit("temperature") | decimalSymbol }}
                 </td>
                 {% if config.showPrecipitationAmount %}
                     <td class="align-right bright precipitation-amount">
