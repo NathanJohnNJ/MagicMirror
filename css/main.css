@@ -1,10 +1,16 @@
+@font-face {
+  font-family: 'NathanOutline';
+  src: url('../fonts/NathanOutline-Regular.woff2') format('woff2');
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root {
   --color-text: #999;
   --color-text-dimmed: #666;
   --color-text-bright: #fff;
   --color-background: #000;
-  --font-primary: "Roboto Condensed";
-  --font-secondary: "Roboto";
+  --font-primary: "NathanOutline";
+  --font-secondary: "Poppins";
   --font-size: 20px;
   --font-size-xsmall: 0.75rem;
   --font-size-small: 1rem;
@@ -37,7 +43,7 @@ body {
   width: calc(100% - var(--gap-body-right) - var(--gap-body-left));
   background: var(--color-background);
   color: var(--color-text);
-  font-family: var(--font-primary), sans-serif;
+  font-family: var(--font-secondary), sans-serif;
   font-weight: 400;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -91,17 +97,17 @@ body {
 }
 
 .light {
-  font-family: var(--font-primary), sans-serif;
+  font-family: var(--font-secondary), sans-serif;
   font-weight: 300;
 }
 
 .regular {
-  font-family: var(--font-primary), sans-serif;
+  font-family: var(--font-secondary), sans-serif;
   font-weight: 400;
 }
 
 .bold {
-  font-family: var(--font-primary), sans-serif;
+  font-family: var(--font-secondary), sans-serif;
   font-weight: 700;
 }
 
@@ -115,14 +121,14 @@ body {
 
 header {
   text-transform: uppercase;
-  font-size: var(--font-size-xsmall);
-  font-family: var(--font-primary), Arial, Helvetica, sans-serif;
+  color: var(--color-text-bright);
+  font-size: var(--font-size-medium);
+  font-family: var(--font-primary), sans-serif;
   font-weight: 400;
   border-bottom: 1px solid var(--color-text-dimmed);
   line-height: 15px;
   padding-bottom: 5px;
   margin-bottom: 10px;
-  color: var(--color-text);
 }
 
 sup {
