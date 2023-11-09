@@ -2,7 +2,7 @@ serveronly/
 CHANGELOG.md
 LICENSE.md
 Collaboration.md
-translations/
+#translations/
 # Various Node ignoramuses.
 package-lock.json
 logs
