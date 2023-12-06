@@ -1,7 +1,5 @@
-@font-face {
-  font-family: 'NathanOutline';
-  src: url('../fonts/NathanOutline-Regular.woff2') format('woff2');
-}
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV,SHRP@100,0.5,0;500,0.5,100;750,0.5,100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
@@ -9,19 +7,21 @@
   --color-text-dimmed: #666;
   --color-text-bright: #fff;
   --color-background: #000;
-  --font-primary: "NathanOutline";
-  --font-secondary: "Poppins";
-  --font-size: 20px;
-  --font-size-xsmall: 0.75rem;
-  --font-size-small: 1rem;
-  --font-size-medium: 1.5rem;
-  --font-size-large: 3.25rem;
-  --font-size-xlarge: 3.75rem;
-  --gap-body-top: 60px;
-  --gap-body-right: 60px;
-  --gap-body-bottom: 60px;
-  --gap-body-left: 60px;
-  --gap-modules: 30px;
+  --font-primary: "Poppins";
+  --font-secondary: "Geologica";
+  --font-headers: "Londrina Outline";
+  --font-size: 14px;
+  --font-size-xsmall: 8px;
+  --font-size-small: 10px;
+  --font-size-medium: 12px;
+  --font-size-large: 16px;
+  --font-size-xlarge: 18px;
+  --gap-body-top: 25px;
+  --gap-body-right: 25px;
+  --gap-body-bottom: 25px;
+  --gap-body-left: 25px;
+  --gap-modules: 20px;
+  --titleBG: rgba(255,34,23,0.7);
 }
 
 html {
@@ -43,7 +43,7 @@ body {
   width: calc(100% - var(--gap-body-right) - var(--gap-body-left));
   background: var(--color-background);
   color: var(--color-text);
-  font-family: var(--font-secondary), sans-serif;
+  font-family: var(--font-primary), sans-serif;
   font-weight: 400;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -92,17 +92,17 @@ body {
 }
 
 .thin {
-  font-family: var(--font-secondary), sans-serif;
+  font-family: var(--font-primary), sans-serif;
   font-weight: 100;
 }
 
 .light {
-  font-family: var(--font-secondary), sans-serif;
+  font-family: var(--font-primary), sans-serif;
   font-weight: 300;
 }
 
 .regular {
-  font-family: var(--font-secondary), sans-serif;
+  font-family: var(--font-primary), sans-serif;
   font-weight: 400;
 }
 
@@ -121,14 +121,16 @@ body {
 
 header {
   text-transform: uppercase;
-  color: var(--color-text-bright);
-  font-size: var(--font-size-medium);
-  font-family: var(--font-primary), sans-serif;
-  font-weight: 400;
-  border-bottom: 1px solid var(--color-text-dimmed);
+  font-size: var(--font-size-large);
+  font-family: var(--font-headers), sans-serif;
+  font-weight: 550;
+/*  border-bottom: 1px solid var(--color-text-dimmed);*/
+  background-color: var(--titleBG);
+  border-radius: 15%;
   line-height: 15px;
-  padding-bottom: 5px;
+  padding: 5px;
   margin-bottom: 10px;
+  color: var(--color-text);
 }
 
 sup {
@@ -181,16 +183,22 @@ sup {
   pointer-events: none;
 }
 
-.region.right {
+.region.top.right,
+.region.middle.right,
+.region.bottom.right {
   right: 0;
   text-align: right;
 }
 
 .region.top {
-  top: 0;
+  top: 0;    
+}
+.region.top.bar{
+  height:28%;   
 }
 
 .region.top.center,
+.region.middle.center,
 .region.bottom.center {
   left: 50%;
   transform: translateX(-50%);
@@ -201,9 +209,11 @@ sup {
 .region.top.center {
   top: 100%;
 }
-
 .region.bottom {
   bottom: 0;
+}
+.region.bottom.bar{
+  height:28%;
 }
 
 .region.bottom.right,
@@ -214,34 +224,53 @@ sup {
 
 .region.bar {
   width: 100%;
+  height: 15%;
   text-align: center;
 }
 
-.region.third,
-.region.middle.center {
-  width: 100%;
+.region.middle{
   text-align: center;
-  transform: translateY(-50%);
-}
-
-.region.upper.third {
-  top: 33%;
-}
-
-.region.middle.center {
   top: 50%;
 }
-
-.region.lower.third {
-  top: 66%;
+.region.middle.bar{
+  height:28%;
 }
 
 .region.left {
   text-align: left;
 }
-
 .region table {
   width: 100%;
   border-spacing: 0;
   border-collapse: separate;
 }
+.wi-day-sunny {
+  color: #ffff00;
+}
+.wi-cloud{
+  color: #00FBFF;
+}
+.wi-rain{
+  color: #0000FF;
+}
+.region.middle.center{
+  animation: zoomIn 10s linear;
+}
+@keyframes zoomIn {
+    from { transform: scale(0); }
+    to   { transform: scale(0.8); }
+  }
+@-o-keyframes zoomIn {
+    from { transform: scale(0); }
+    to   { transform: scale(0.8); }
+  }
+@-moz-keyframes zoomIn {
+    from { transform: scale(0); }
+    to   { transform: scale(0.8); }
+  }
+@-webkit-keyframes zoomIn {
+    from { transform: scale(0); }
+    to   { transform: scale(0.8); }
+  }
+
+/*circles 10s linear -4s infinite;  */

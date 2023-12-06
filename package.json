@@ -30,7 +30,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/MichMich/MagicMirror.git"
+		"url": "git+https://github.com/NathanJohnNJ/MagicMirror.git"
 	},
 	"keywords": [
 		"magic mirror",
@@ -39,10 +39,8 @@
 		"mirror UI",
 		"modular"
 	],
-	"author": "Michael Teeuw",
-	"contributors": [
-		"https://github.com/MichMich/MagicMirror/graphs/contributors"
-	],
+	"author": "Nathan John",
+	"contributors": [],
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/MichMich/MagicMirror/issues"
@@ -69,7 +67,7 @@
 		"suncalc": "^1.9.0"
 	},
 	"optionalDependencies": {
-		"electron": "^26.2.4"
+		"electron": "^26.6.2"
 	},
 	"dependencies": {
 		"colors": "^1.4.0",
